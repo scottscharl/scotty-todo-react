@@ -1,0 +1,25 @@
+export default function Task(item, index) {
+  return (
+    <div key={index}>
+      <span>
+        {index + 1}. {item}
+      </span>
+      <button
+        onClick={() => {
+          setItems(items.filter((item) => item !== items[index]));
+          // reset the array to NOT inclue that onChange
+        }}
+      >
+        delete
+      </button>
+      <button
+        onClick={() => {
+          setItems(items.filter((item) => item !== items[index]));
+          // reset the array to NOT inclue that onChange
+        }}
+      >
+        edit
+      </button>
+    </div>
+  );
+}
